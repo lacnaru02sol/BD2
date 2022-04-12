@@ -1,0 +1,22 @@
+---------------CONSULTA 1-------------------
+
+SELECT left(f.title,1) as letra
+	,count(distinct f.film_id) as n_pelicula
+	,count(r.rental_id) as n_alquiler
+from
+	film f
+	,inventory i
+	,rental r
+where
+	SUBSTRING (f.titled, 1, 1) IN ('A','E','I','O','U')
+	and f.film_id = f.film_id
+	and i.inventory_id = r.inventory_id
+group bt letra
+order by count(r.rental_id) desc;
+
+---------------CONSULTA 2-------------------
+
+SELECT anyo, mes, staff_id
+FROM (SELECT anyo AS anyo,mes AS mes, aux.staff_id AS staff_idd, MAX(alquileres_atendidos) AS N
+ 	FROM (SELECT EXTRACT(YEAR)
+		FROM rrental_date) AS anyo, eXTRACT (MONTH
