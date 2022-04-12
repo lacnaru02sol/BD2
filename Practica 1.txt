@@ -15,7 +15,7 @@ group bt letra
 order by count(r.rental_id) desc;
 
 ---------------CONSULTA 2-------------------
-
+dsa
 SELECT anyo, mes, staff_id
 FROM (SELECT anyo AS anyo,mes AS mes, aux.staff_id AS staff_idd, MAX(alquileres_atendidos) AS N
  	FROM (SELECT EXTRACT(YEAR)
@@ -25,4 +25,4 @@ FROM (SELECT anyo AS anyo,mes AS mes, aux.staff_id AS staff_idd, MAX(alquileres_
 		HE CAMBIADO ESTE ARCHIVO AQUI
 
 		sgnfnlabng-lssgdg
-		
+		 Otro cambio
