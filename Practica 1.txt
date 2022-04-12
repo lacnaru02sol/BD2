@@ -20,3 +20,9 @@ SELECT anyo, mes, staff_id
 FROM (SELECT anyo AS anyo,mes AS mes, aux.staff_id AS staff_idd, MAX(alquileres_atendidos) AS N
  	FROM (SELECT EXTRACT(YEAR)
 		FROM rrental_date) AS anyo, eXTRACT (MONTH
+
+
+		HE CAMBIADO ESTE ARCHIVO AQUI
+
+		sgnfnlabng-lssgdg
+		
