@@ -1,8 +1,6 @@
-DROP DATABASE IF EXISTS bdauxiliar;
-CREATE DATABASE bdauxiliar;
-\c bdauxiliar;
+\c repositorio;
 
-CREATE TABLE  oferta (
+CREATE TABLE  ofertaaux (
     curso_academico VARCHAR(50),
     estudio VARCHAR(150),
     localidad VARCHAR(140),
@@ -15,9 +13,9 @@ CREATE TABLE  oferta (
     ind VARCHAR(50),
     fecha VARCHAR(40)
 );
-COPY oferta FROM '/home/alumno/oferta2019.csv' USING DELIMITERS ';';
-COPY oferta FROM '/home/alumno/oferta2020.csv' USING DELIMITERS ';';
-COPY oferta FROM '/home/alumno/oferta2021.csv' USING DELIMITERS ';';
+COPY ofertaaux FROM '/home/alumno/oferta2019.csv' USING DELIMITERS ';';
+COPY ofertaaux FROM '/home/alumno/oferta2020.csv' USING DELIMITERS ';';
+COPY ofertaaux FROM '/home/alumno/oferta2021.csv' USING DELIMITERS ';';
 
 CREATE TABLE  resultados (
     curso_academico VARCHAR(50),
